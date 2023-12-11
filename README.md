@@ -8,6 +8,7 @@ On your local machine, clone this repo:
 ```bash
 git clone https://github.com/khadka7/laravel-docker.git
 cd laravel-docker
+rename .env.example with .env or add .env
 ```
 
 #### Docker Setup
