@@ -49,12 +49,6 @@ services:
             - dbdata:/var/lib/mysql
         networks:
             - app
-    redis:
-        image: redis:alpine
-        restart: unless-stopped
-        networks:
-            - app
-
     adminer:
         image: adminer
         environment:
@@ -63,21 +57,6 @@ services:
             - db
         ports:
             - "9001:8080"
-        restart: unless-stopped
-        networks:
-            - app
-
-    phpredisadmin:
-        image: erikdubbelboer/phpredisadmin
-        environment:
-            - ADMIN_USER=admin
-            - ADMIN_PASS=admin
-            - REDIS_1_HOST=redis
-            - REDIS_1_PORT=6379
-        links:
-            - redis
-        ports:
-            - "9003:80"
         restart: unless-stopped
         networks:
             - app
