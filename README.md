@@ -49,9 +49,11 @@ docker-compose up -d
 ##### If you wish to execute command without `docker-compose exec`
 - use either `docker-compose exec app sh`
 - or `docker-compose exec app bash`
-> then you can use commands  command without having to execute `docker-compose exec ticketing ${YOUR_COMMAND}`
+> then you can use commands  command without having to execute `docker-compose exec app ${YOUR_COMMAND}`
 
 ##### This project is built on following docker images
 - [8.1.2](https://hub.docker.com/_/php)
 - [ngnix](https://hub.docker.com/_/nginx)
+- [mysql:8.0](https://hub.docker.com/_/mysql)
+- [db mgmt](https://hub.docker.com/_/adminer)
   
